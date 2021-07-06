@@ -3,6 +3,7 @@ const Contact = () => {
     backgroundColor: '#fff',
     color: '#222',
     padding: '1rem',
+    animation: 'fadeIn ease 0.3s',
   };
 
   return (
