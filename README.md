@@ -1,3 +1,5 @@
+# install react-app
+
 - download or clone repo
 - cd into ```siki_moto``` folder 
 - run ```npm install```
