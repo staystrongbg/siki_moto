@@ -8,7 +8,6 @@ const category = [
       {
         id: 'cizme_0',
         src: '/images/cizme',
-        name: 'cizme',
         desc: '',
         price: 100,
       },
@@ -23,7 +22,6 @@ const category = [
       {
         id: 'jakne_0',
         src: '/images/jakne',
-        name: 'jakna',
         desc: '',
         price: 200,
       },
@@ -38,7 +36,6 @@ const category = [
       {
         id: 'odela_0',
         src: '/images/odela',
-        name: 'odelo',
         desc: '',
         price: 300,
       },
@@ -53,7 +50,6 @@ const category = [
       {
         id: 'pantalone_0',
         src: '/images/pantalone',
-        name: 'pantalone',
         desc: '',
         price: 100,
       },
@@ -68,7 +64,6 @@ const category = [
       {
         id: 'rukavice_0',
         src: '/images/rukavice',
-        name: 'rukavice',
         desc: '',
         price: 50,
       },
@@ -83,7 +78,6 @@ const category = [
       {
         id: 'stitnici_0',
         src: '/images/stitnici',
-        name: 'stitnici',
         desc: '',
         price: 200,
       },
@@ -98,56 +92,48 @@ const category = [
       {
         id: 'kaciga_0',
         src: '/images/kacige/k1',
-        name: 'kaciga 1',
         desc: ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum voluptatibus quos, enim sapiente labore dolorum odio iure quidem necessitatibus dicta eius quaerat sed? Ipsam blanditiis placeat non, culpa expedita aspernatur.',
         price: 300,
       },
       {
         id: 'kaciga_1',
         src: '/images/kacige/k2',
-        name: 'kaciga 2',
         desc: ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum voluptatibus quos, enim sapiente labore dolorum odio iure quidem necessitatibus dicta eius quaerat sed? Ipsam blanditiis placeat non, culpa expedita aspernatur.',
         price: 0,
       },
       {
         id: 'kaciga_2',
         src: '/images/kacige/k3',
-        name: 'kaciga 3',
         desc: ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum voluptatibus quos, enim sapiente labore dolorum odio iure quidem necessitatibus dicta eius quaerat sed? Ipsam blanditiis placeat non, culpa expedita aspernatur.',
         price: 52,
       },
       {
         id: 'kaciga_3',
         src: '/images/kacige/k11',
-        name: 'kaciga 4',
         desc: ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum voluptatibus quos, enim sapiente labore dolorum odio iure quidem necessitatibus dicta eius quaerat sed? Ipsam blanditiis placeat non, culpa expedita aspernatur.',
         price: 90,
       },
       {
         id: 'kaciga_4',
         src: '/images/kacige/k12',
-        name: 'kaciga 5',
         desc: ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum voluptatibus quos, enim sapiente labore dolorum odio iure quidem necessitatibus dicta eius quaerat sed? Ipsam blanditiis placeat non, culpa expedita aspernatur.',
         price: 40,
       },
       {
         id: 'kaciga_5',
         src: '/images/kacige/k13',
-        name: 'kaciga 6',
         desc: ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum voluptatibus quos, enim sapiente labore dolorum odio iure quidem necessitatibus dicta eius quaerat sed? Ipsam blanditiis placeat non, culpa expedita aspernatur.',
         price: 100,
       },
       {
         id: 'kaciga_6',
         src: '/images/kacige/k22i',
-        name: 'kaciga 7',
         desc: ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum voluptatibus quos, enim sapiente labore dolorum odio iure quidem necessitatibus dicta eius quaerat sed? Ipsam blanditiis placeat non, culpa expedita aspernatur.',
         price: 700,
       },
       {
         id: 'kaciga_7',
         src: '/images/kacige/k23',
-        name: 'kaciga 8',
         desc: ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum voluptatibus quos, enim sapiente labore dolorum odio iure quidem necessitatibus dicta eius quaerat sed? Ipsam blanditiis placeat non, culpa expedita aspernatur.',
         price: 200,
       },
@@ -162,7 +148,6 @@ const category = [
       {
         id: 'potkapa_0',
         src: '/images/ostalo',
-        name: 'potkapa',
         desc: '',
         price: 1400,
       },

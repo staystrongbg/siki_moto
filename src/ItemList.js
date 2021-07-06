@@ -18,9 +18,9 @@ const ItemList = ({ data }) => {
                   <img src={slika.src + '.jpg'} alt={slika.id}></img>
                 </Link>
                 <div className='desc'>
-                  <h3>{slika.name}</h3>
-                  <div className='short-d'>{slika.desc}</div>
-                  <p className='cena'>{slika.price} din</p>
+                  <h3>{slika.id}</h3>
+                  <p>{slika.desc}</p>
+                  <span className='cena'>{slika.price} din</span>
                 </div>
               </div>
             ))

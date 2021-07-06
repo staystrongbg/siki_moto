@@ -25,10 +25,8 @@ const Item = ({ data }) => {
       <img className='big-i' src={oneSingleItem.src + '.jpg'} alt='' />
       <div className='desc'>
         <h3>{itemID}</h3>
-
-        <div className='short-d'>{oneSingleItem.desc}</div>
-
-        <p className='cena'>{oneSingleItem.price} din</p>
+        <p>{oneSingleItem.desc}</p>
+        <span className='cena'>{oneSingleItem.price} din</span>
       </div>
     </div>
   );
