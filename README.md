@@ -3,4 +3,4 @@
 - download or clone repo
 - cd into ```siki_moto``` folder 
 - run ```npm install```
-- run ```npm start``` to start local server in browser @port: 3000  
+- run ```npm run start``` to start local server in browser @port: 3000  
