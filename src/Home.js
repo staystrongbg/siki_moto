@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
-const Home = ({ data }) => {
+const Home = ({ items }) => {
   return (
     <div className='kat'>
-      {data.map(({ id, title, img }) => (
+      {items.map(({ id, title, img }) => (
         <li key={id}>
           <span>{title}</span>
           <Link to={`/${title}`}>

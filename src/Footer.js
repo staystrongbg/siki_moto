@@ -18,7 +18,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className='by'>b y z</div>
     </footer>
   );
 };

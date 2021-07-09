@@ -1,7 +1,7 @@
 import { useParams, useRouteMatch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-const ItemList = ({ data }) => {
+const ItemList = ({ items }) => {
   const { title } = useParams();
   const { url } = useRouteMatch();
 
@@ -9,18 +9,18 @@ const ItemList = ({ data }) => {
     <>
       <h1>{title}</h1>
       <div className='main'>
-        {data
-          .filter((cat) => cat.title == title)
-          .map((item) =>
-            item.slike.map((slika, index) => (
-              <div className='item' key={slika.id}>
-                <Link to={`${url}/${slika.id}`}>
-                  <img src={slika.src + '.jpg'} alt={slika.id}></img>
+        {items
+          .filter((cat) => cat.title === title)
+          .map(({ slike }) =>
+            slike.map(({ id, src, desc, price }) => (
+              <div className='item' key={id}>
+                <Link to={`${url}/${id}`}>
+                  <img src={src + '.jpg'} alt={id}></img>
                 </Link>
                 <div className='desc'>
-                  <h3>{slika.id}</h3>
-                  <p>{slika.desc}</p>
-                  <span className='cena'>{slika.price} din</span>
+                  <h3>{id}</h3>
+                  <p>{desc}</p>
+                  <span className='cena'>{price} din</span>
                 </div>
               </div>
             ))
