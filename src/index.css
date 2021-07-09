@@ -397,6 +397,18 @@ footer {
 }
 
 @media (max-width: 895px) {
+  .single-item {
+    flex-direction: column;
+  }
+  .single-item .side-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
   .nav img {
     width: 80px;
     height: 80px;
@@ -417,15 +429,6 @@ footer {
     font-size: 80%;
   }
   .container {
-    width: 100%;
-  }
-  .single-item {
-    flex-direction: column;
-  }
-  .single-item .side-slider {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     width: 100%;
   }
 }
