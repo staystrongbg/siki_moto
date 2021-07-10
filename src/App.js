@@ -11,7 +11,7 @@ import Item from './Item';
 import Footer from './Footer';
 import logo from './images/logo_fin-01.png';
 
-const url = 'http://localhost:8000/category';
+const url = './db_min.json';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -28,8 +28,8 @@ function App() {
           return res.json();
         })
         .then((data) => {
-          console.log(data);
-          setItems(data);
+          console.log(data.category);
+          setItems(data.category);
           setLoading(false);
           setError(false);
         })
