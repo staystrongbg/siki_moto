@@ -11,28 +11,27 @@ const Footer = () => {
 
   return (
     <footer>
+      <div id='desni'>
+        <p>
+          Moto oprema "Grada"
+          <br />
+          Adresa: Ruzveltova 36, Zvezdara, Beograd
+          <br />
+          Broj telefona:+381 65555888
+          <br />
+          E-mail:moto-oprema@gmail.com
+        </p>
+      </div>
       <div className='map-responsive'>
         <iframe
           title='gmap'
-          width='600'
+          width='100%'
           height='450'
-          style={{ border: '0' }}
+          style={{ border: '0', maxWidth: '450px' }}
           loading='lazy'
           allowFullScreen
           src={map.url + map.key}
         ></iframe>
-
-        <div id='desni'>
-          <p>
-            Moto oprema "Grada"
-            <br />
-            Adresa: Ruzveltova 36, Zvezdara, Beograd
-            <br />
-            Broj telefona:+381 65555888
-            <br />
-            E-mail:moto-oprema@gmail.com
-          </p>
-        </div>
       </div>
     </footer>
   );
