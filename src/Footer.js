@@ -1,11 +1,27 @@
 const Footer = () => {
-  const gmap =
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4020.8051373876838!2d20.475993457745698!3d44.80603007529089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a9f30e9b991%3A0x515cfc83514922cd!2z0KDRg9C30LLQtdC70YLQvtCy0LAgMzYsINCR0LXQvtCz0YDQsNC0!5e0!3m2!1ssr!2srs!4v1483350761047 width="40%" height="100%" frameborder="0" allowfullscreen>';
+  class GoogleMap {
+    constructor() {
+      this.key = 'AIzaSyCssHs77KIyctvIxqnDaIHjwmr5_B_Mk7E';
+      this.url =
+        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJeVhppl6WkcRl1S8ZkX67cw&key=';
+    }
+  }
+
+  const map = new GoogleMap();
 
   return (
     <footer>
       <div className='map-responsive'>
-        <iframe src={gmap} title='google map'></iframe>
+        <iframe
+          title='gmap'
+          width='600'
+          height='450'
+          style={{ border: '0' }}
+          loading='lazy'
+          allowFullScreen
+          src={map.url + map.key}
+        ></iframe>
+
         <div id='desni'>
           <p>
             Moto oprema "Grada"
@@ -23,3 +39,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// const api_key = 'AIzaSyCssHs77KIyctvIxqnDaIHjwmr5_B_Mk7E';
+// const gmapURL = `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJeVhppl6WkcRl1S8ZkX67cw&key=${api_key}`;

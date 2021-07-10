@@ -4,7 +4,6 @@ const Item = ({ items }) => {
   const { itemID, title } = useParams();
 
   const category = items.filter((item) => item.title === title);
-
   const singleItem = category[0].slike.find((item) => item.id === itemID);
 
   function showImage(event) {

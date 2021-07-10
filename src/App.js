@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import data from './data';
+// import data from './data'; ? load data from local folder instead of fetching
 import Loading from './Loading';
 import Contact from './Contact';
 import About from './About';
@@ -16,23 +16,33 @@ const url = 'http://localhost:8000/category';
 function App() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const dataFetch = async () => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      console.log(data);
-      setItems(data);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-  };
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    dataFetch();
+    (async () => {
+      await fetch(url)
+        .then((res) => {
+          if (!res.ok) {
+            throw Error('Could not fetch data from that resource');
+          }
+          return res.json();
+        })
+        .then((data) => {
+          console.log(data);
+          setItems(data);
+          setLoading(false);
+          setError(false);
+        })
+        .catch((err) => {
+          setError(err.message);
+          setLoading(false);
+        });
+    })();
+
     document.title = 'Moto oprema GRADA';
+    return () => {
+      console.log('cleanup');
+    };
   }, []);
 
   return (
@@ -41,6 +51,11 @@ function App() {
         <Navbar logo={logo} />
         <div className='container'>
           {loading && <Loading />}
+          {error && (
+            <div>
+              <h2>Couldn't fetch the data</h2>
+            </div>
+          )}
           <Switch>
             <Route exact path='/'>
               <Home items={items} />
