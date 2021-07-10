@@ -435,4 +435,13 @@ footer {
   .container {
     width: 100%;
   }
+  .map-responsive {
+    flex-direction: column;
+  }
+  .main .item {
+    width: 180px;
+  }
+  .single-item .side-slider {
+    flex-wrap: wrap;
+  }
 }
