@@ -11,7 +11,7 @@ import Item from './Item';
 import Footer from './Footer';
 import logo from './images/logo_fin-01.png';
 
-const url = './db_min.json';
+const url = './db.json';
 
 function App() {
   const [items, setItems] = useState([]);

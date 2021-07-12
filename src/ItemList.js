@@ -8,6 +8,8 @@ const ItemList = ({ items }) => {
   return (
     <>
       <h1>{title}</h1>
+
+      {/* click event na svaku slikicu pa da slika dobije class active */}
       <div className='main'>
         {items
           .filter((cat) => cat.title === title)

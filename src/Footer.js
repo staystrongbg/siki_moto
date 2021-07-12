@@ -38,6 +38,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// const api_key = 'AIzaSyCssHs77KIyctvIxqnDaIHjwmr5_B_Mk7E';
-// const gmapURL = `https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJeVhppl6WkcRl1S8ZkX67cw&key=${api_key}`;

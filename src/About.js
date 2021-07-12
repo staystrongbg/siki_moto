@@ -10,10 +10,13 @@ const About = () => {
       <h1>O nama</h1>
       <div style={styles}>
         <p>
-          Lorxsdcxem ipsum dolor sit amet consectetur adipisicing elit. Illo
-          aliquam, optio culpa porro deserunt nesciunt repellendus nemo
-          obcaecati sit fugit vitae repudiandae consequatur eos voluptates
-          voluptas aut maxime perferendis reprehenderit!
+          Moto oprema "Grada"
+          <br />
+          Adresa: Ruzveltova 36, Zvezdara, Beograd
+          <br />
+          Broj telefona:+381 65555888
+          <br />
+          E-mail:moto-oprema@gmail.com
         </p>
       </div>
     </>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100;300;400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -22,7 +23,6 @@ body {
   width: 100%;
   background-color: #222;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   font-family: 'Quicksand';
   font-weight: 300;
@@ -51,8 +51,12 @@ body {
   color: #eee;
 }
 
-a:visited {
+.nav a:visited {
   color: #eee;
+}
+
+.nav .links li:hover {
+  border-bottom: 2px solid #fbad18;
 }
 
 a {
@@ -76,6 +80,7 @@ a {
   border-radius: 3px;
   width: 100%;
   display: flex;
+  align-items: center;
   animation: fadeIn ease 0.3s;
 }
 
@@ -91,7 +96,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 125px;
+  width: 225px;
 }
 
 .single-item .side-slider img {
@@ -109,7 +114,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 265px;
-  /* margin: 3px; */
+  margin: 3px;
   background-color: white;
   border: 1px solid #e2e2e2;
   transition: all ease-in-out 0.3s;
@@ -126,11 +131,7 @@ a {
 }
 
 .main .item:hover {
-  /* box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);s */
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 h1,
@@ -197,7 +198,7 @@ hr {
   list-style: none;
   font-size: 100%;
   font-family: 'Big Shoulders Stencil Display';
-  font-weight: 500;
+  font-weight: 700;
   position: relative;
   margin: auto;
   padding: 0;
@@ -222,8 +223,8 @@ hr {
   top: -10px;
   right: -10px;
   background-color: #fbad18;
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   font-size: 120%;
   display: flex;
