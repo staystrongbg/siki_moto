@@ -5,3 +5,7 @@
 
 ## in another terminal run
 ``` npx json-server --watch data/db.json --port 8000```
+
+## live preview
+
+https://sikimoto-app.netlify.app/
