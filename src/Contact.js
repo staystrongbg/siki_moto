@@ -1,7 +1,7 @@
 const Contact = () => {
   const styles = {
-    backgroundColor: '#fff',
-    color: '#222',
+    backgroundColor: 'rgba(0,0,0,0.9)',
+    color: '#eee',
     padding: '1rem',
     animation: 'fadeIn ease 0.3s',
   };

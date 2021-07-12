@@ -27,11 +27,21 @@ const Footer = () => {
           <h1 style={{ marginTop: 0 }}>"GRADA"</h1>
           <p>
             <br />
-            <FaStreetView /> Ruzveltova 36, Zvezdara, Beograd
+            <span>
+              <FaStreetView />
+            </span>{' '}
+            Ruzveltova 36, Zvezdara, Beograd
             <br />
-            <FaPhoneSquareAlt /> +381 65555888
+            <span>
+              {' '}
+              <FaPhoneSquareAlt />
+            </span>{' '}
+            +381 65555888
             <br />
-            <FaEnvelopeSquare /> moto-oprema@gmail.com
+            <span>
+              <FaEnvelopeSquare />
+            </span>{' '}
+            moto-oprema@gmail.com
           </p>
         </div>
         <iframe
@@ -44,6 +54,7 @@ const Footer = () => {
           src={url + key}
         ></iframe>
       </div>
+      <span style={{ margin: '50%', transform: 'translate(-50%)' }}>b y z</span>
     </footer>
   );
 };
