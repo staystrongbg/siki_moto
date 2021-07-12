@@ -1,3 +1,9 @@
+import {
+  FaEnvelopeSquare,
+  FaPhoneSquareAlt,
+  FaStreetView,
+} from 'react-icons/fa';
+
 const Footer = () => {
   class GoogleMap {
     constructor() {
@@ -7,20 +13,25 @@ const Footer = () => {
     }
   }
 
-  const map = new GoogleMap();
+  const { url, key } = new GoogleMap();
 
   return (
     <footer>
       <div className='map-responsive'>
         <div id='desni'>
+          <h2
+            style={{ textTransform: 'lowercase', padding: 0, marginBottom: 0 }}
+          >
+            moto oprema
+          </h2>
+          <h1 style={{ marginTop: 0 }}>"GRADA"</h1>
           <p>
-            Moto oprema "Grada"
             <br />
-            Adresa: Ruzveltova 36, Zvezdara, Beograd
+            <FaStreetView /> Ruzveltova 36, Zvezdara, Beograd
             <br />
-            Broj telefona:+381 65555888
+            <FaPhoneSquareAlt /> +381 65555888
             <br />
-            E-mail:moto-oprema@gmail.com
+            <FaEnvelopeSquare /> moto-oprema@gmail.com
           </p>
         </div>
         <iframe
@@ -30,7 +41,7 @@ const Footer = () => {
           style={{ border: '0', maxWidth: '450px' }}
           loading='lazy'
           allowFullScreen
-          src={map.url + map.key}
+          src={url + key}
         ></iframe>
       </div>
     </footer>
