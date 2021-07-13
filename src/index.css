@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100;300;400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --clr-logo-yellow: #fbad18;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -49,6 +53,7 @@ body {
   margin-right: 20px;
   text-decoration: none;
   color: #eee;
+  margin-bottom: -4px;
 }
 
 .nav a:visited {
@@ -56,7 +61,7 @@ body {
 }
 
 .nav .links li:hover {
-  border-bottom: 2px solid #fbad18;
+  border-bottom: 2px solid var(--clr-logo-yellow);
 }
 
 a {
@@ -176,7 +181,7 @@ a {
   display: flex;
   align-self: flex-end;
   color: #222;
-  background-color: #fbad18;
+  background-color: var(--clr-logo-yellow);
   border-radius: 5px;
 }
 
@@ -222,7 +227,7 @@ hr {
   position: absolute;
   top: -10px;
   right: -10px;
-  background-color: #fbad18;
+  background-color: var(--clr-logo-yellow);
   width: 75px;
   height: 75px;
   border-radius: 50%;
@@ -300,13 +305,13 @@ footer {
   width: 100%;
   height: 100%;
   border: 10px solid transparent;
-  border-top-color: #fbad18;
+  border-top-color: var(--clr-logo-yellow);
   border-radius: 50%;
   animation: spinnerOne 1.2s linear infinite;
 }
 .spinner div:nth-child(2) {
   border: 10px solid transparent;
-  border-bottom-color: #fbad18;
+  border-bottom-color: var(--clr-logo-yellow);
   animation: spinnerTwo 1.2s linear infinite;
 }
 
@@ -441,8 +446,5 @@ footer {
   }
   .main .item {
     width: 180px;
-  }
-  .single-item .side-slider {
-    flex-wrap: wrap;
   }
 }
