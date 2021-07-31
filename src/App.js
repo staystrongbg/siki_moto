@@ -16,12 +16,12 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const url = '/db.json';
+  // const url = '/db.json';
 
   document.title = 'Moto oprema GRADA';
 
   const getData = async () => {
-    const resp = await fetch(url);
+    const resp = await fetch('/db.json');
     const data = await resp.json();
     setItems(data.category);
     setLoading(false);
