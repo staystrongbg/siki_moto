@@ -1,15 +1,24 @@
 import { useParams } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
 
 const Item = ({ items }) => {
   const { itemID, title } = useParams();
+  const bigImage = useRef(null);
+  const [singleItem, setSingleItem] = useState({});
 
-  const category = items.filter((item) => item.title === title);
-  const singleItem = category[0].slike.find((item) => item.id === itemID);
-  console.log(category[0].slike);
+  useEffect(() => {
+    const category = items.find((item) => item.title === title);
+    const { slike } = category;
+    const item = slike.find((slika) => slika.id === itemID);
+    setSingleItem(item);
+  }, []);
+
+  console.log(singleItem);
   console.log(title, '/', itemID);
 
   function showImage(event) {
-    document.querySelector('.big-i').src = event.target.src;
+    console.log(event.target);
+    bigImage.current.src = event.target.src;
   }
 
   return (
@@ -42,7 +51,12 @@ const Item = ({ items }) => {
           style={{ width: '100%' }}
         />
       </div>
-      <img className='big-i' src={singleItem.src + '.jpg'} alt='' />
+      <img
+        ref={bigImage}
+        className='big-i'
+        src={singleItem.src + '.jpg'}
+        alt={singleItem.id}
+      />
       <div className='desc'>
         <h3>{itemID}</h3>
         <p>{singleItem.desc}</p>

@@ -1,4 +1,11 @@
+import { useContext } from 'react';
+import { AppContext } from './context';
+
 const Contact = () => {
+  const data = useContext(AppContext);
+  const { greetings } = data;
+  console.log(greetings);
+
   const styles = {
     backgroundColor: 'rgba(0,0,0,0.9)',
     color: '#eee',

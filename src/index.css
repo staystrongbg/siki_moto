@@ -30,6 +30,7 @@ body {
   justify-content: space-between;
   font-family: 'Quicksand';
   font-weight: 300;
+  white-space: nowrap;
 }
 
 .nav img {
@@ -282,6 +283,10 @@ footer {
   align-items: flex-start;
   gap: 2rem;
   justify-content: space-between;
+}
+iframe {
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.8));
+  border-radius: 3px;
 }
 
 .by {

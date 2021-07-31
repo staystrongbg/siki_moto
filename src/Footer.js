@@ -5,15 +5,20 @@ import {
 } from 'react-icons/fa';
 
 const Footer = () => {
-  class GoogleMap {
-    constructor() {
-      this.key = 'AIzaSyCssHs77KIyctvIxqnDaIHjwmr5_B_Mk7E';
-      this.url =
-        'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJeVhppl6WkcRl1S8ZkX67cw&key=';
-    }
-  }
+  // class GoogleMap {
+  //   constructor() {
+  //     this.key = 'AIzaSyCssHs77KIyctvIxqnDaIHjwmr5_B_Mk7E';
+  //     this.url =
+  //       'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJeVhppl6WkcRl1S8ZkX67cw&key=';
+  //   }
+  // }
 
-  const { url, key } = new GoogleMap();
+  const googleMap = {
+    key: 'AIzaSyCssHs77KIyctvIxqnDaIHjwmr5_B_Mk7E',
+    url: 'https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJeVhppl6WkcRl1S8ZkX67cw&key=',
+  };
+
+  const { url, key } = googleMap;
 
   return (
     <footer>

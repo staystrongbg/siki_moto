@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-// import data from './data'; ? load data from local folder instead of fetching
 import Loading from './Loading';
 import Contact from './Contact';
 import About from './About';
@@ -8,41 +7,29 @@ import Navbar from './Navbar';
 import Home from './Home';
 import ItemList from './ItemList';
 import Item from './Item';
+import Error from './Error';
 import Footer from './Footer';
 import logo from './images/logo_fin-01.png';
-
-const url = './db.json';
 
 function App() {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    (async () => {
-      await fetch(url)
-        .then((res) => {
-          if (!res.ok) {
-            throw Error('Could not fetch data from that resource');
-          }
-          return res.json();
-        })
-        .then((data) => {
-          console.log(data.category);
-          setItems(data.category);
-          setLoading(false);
-          setError(false);
-        })
-        .catch((err) => {
-          setError(err.message);
-          setLoading(false);
-        });
-    })();
+  const url = 'db.json';
 
-    document.title = 'Moto oprema GRADA';
-    return () => {
-      console.log('cleanup');
-    };
+  document.title = 'Moto oprema GRADA';
+
+  const getData = async () => {
+    const resp = await fetch(url);
+    const data = await resp.json();
+    setItems(data.category);
+    setLoading(false);
+    setError(false);
+  };
+
+  useEffect(() => {
+    getData();
   }, []);
 
   return (
@@ -51,11 +38,8 @@ function App() {
         <Navbar logo={logo} />
         <div className='container'>
           {loading && <Loading />}
-          {error && (
-            <div>
-              <h2>Couldn't fetch the data</h2>
-            </div>
-          )}
+          {error && <Error />}
+
           <Switch>
             <Route exact path='/'>
               <Home items={items} />
