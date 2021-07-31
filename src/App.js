@@ -16,12 +16,12 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const url = 'db.json';
+  // const url = 'db.json';
 
   document.title = 'Moto oprema GRADA';
 
   const getData = async () => {
-    const resp = await fetch(url);
+    const resp = await fetch('/db.json');
     const data = await resp.json();
     setItems(data.category);
     setLoading(false);
@@ -39,28 +39,29 @@ function App() {
         <div className='container'>
           {loading && <Loading />}
           {error && <Error />}
+          {!loading && (
+            <Switch>
+              <Route exact path='/'>
+                <Home items={items} />
+              </Route>
 
-          <Switch>
-            <Route exact path='/'>
-              <Home items={items} />
-            </Route>
+              <Route path='/contact'>
+                <Contact />
+              </Route>
 
-            <Route path='/contact'>
-              <Contact />
-            </Route>
+              <Route path='/about'>
+                <About />
+              </Route>
 
-            <Route path='/about'>
-              <About />
-            </Route>
+              <Route exact path='/:title'>
+                <ItemList items={items} />
+              </Route>
 
-            <Route exact path='/:title'>
-              <ItemList items={items} />
-            </Route>
-
-            <Route path='/:title/:itemID'>
-              <Item items={items} />
-            </Route>
-          </Switch>
+              <Route path='/:title/:itemID'>
+                <Item items={items} />
+              </Route>
+            </Switch>
+          )}
         </div>
         <Footer />
       </>
