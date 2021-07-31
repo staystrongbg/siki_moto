@@ -11,7 +11,7 @@ const Item = ({ items }) => {
     const { slike } = category;
     const item = slike.find((slika) => slika.id === itemID);
     setSingleItem(item);
-  }, [itemID, items, title]);
+  }, []);
 
   console.log(singleItem);
   console.log(title, '/', itemID);
